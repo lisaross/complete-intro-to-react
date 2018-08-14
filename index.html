@@ -7,53 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>svideo</title>
 </head>
-<!-- Base react - send component props to other components -->
 
 <body>
   <div id="app"></div>
-  <!-- import React Library -->
   <script src="node_modules/react/dist/react.js"></script>
-  <!-- React DOM library -->
   <script src="node_modules/react-dom/dist/react-dom.js"></script>
-  <script>
-    // make it shorter by creating a variable for a command
-    // like an alias
-    const ce = React.createElement
-    // set props so you can bring in properties to the function from other components
-    const MyTitle = function (props) {
-      return (
-        ce('div', null,
-          // null is the properties we're passing
-          // you can grab the title prop from MyFirstComponent with props.title
-          ce('h1', { style: { color: props.color } }, props.title))
-      )
-    }
-
-    // reusable component - class
-    const MyFirstComponent = function () {
-      return ce('div', null,
-        // ce('h1', null, 'This is my first component!')
-        // -- moved up to other component
-        [
-          // create element of a title with title prop for each
-          ce(MyTitle, { title: 'Game of thrones', color: 'peru' }),
-          ce(MyTitle, { title: 'Silicon Valley', color: '#676' }),
-          ce(MyTitle, { title: 'Stranger Things', color: 'YellowGreen' }),
-        ]
-        // you can pass an array of components
-        // you can make components of OTHER components
-        // components can encapsulate LOGIC, MARKUP and STYLE
-        // everything for a component lives in a SINGLE FILE (MVC)
-
-      )
-    }
-    ReactDOM.render(
-      // instance of MyFirstComponent
-      ce(MyFirstComponent),
-      // replace app div with component
-      document.getElementById('app')
-    )
-  </script>
 </body>
 
 </html>
