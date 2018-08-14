@@ -1,13 +1,17 @@
 # A Complete Intro to React
 
-Welcome to a complete intro to React! The site actual workshop material for this repo can be found [here][gh-page]. On the master branch you will find the completed project. On the start branch you will find the barebones boilerplater of the project designed to help you get started.
+## Notes
 
-## Contributing
+### Prettier
 
-Please contribute, file issues, and make PRs. More than anything I'm sure there are typos abounding.
+* reformats code on save to match coding standards
+* doesn't work if code isn't first valid for the language
+* formatter only - doesn't check for style
 
-## License
+### eslint
 
-MIT
+* looks for functions/style
 
-[gh-page]: http://btholt.github.io/complete-intro-to-react/
+### airbnb
+
+* configuration of eslint
