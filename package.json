@@ -1,7 +1,9 @@
 {
   "scripts": {
     "api": "node ratingsAPI.js",
-    "lint": "./node_modules/.bin/eslint --quiet '**/*.{js,jsx}'; true",
+    "lint": "eslint --quiet '**/*.{js,jsx}'; true",
+    "build": "webpack",
+    "watch": "webpack --watch",
     "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\""
   },
   "dependencies": {
@@ -60,6 +62,7 @@
     "prettier": "^1.14.2",
     "react-hot-loader": "3.0.0-beta.6",
     "react-test-renderer": "15.5.4",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "2.4.5"
   },
   "name": "complete-intro-to-react",
